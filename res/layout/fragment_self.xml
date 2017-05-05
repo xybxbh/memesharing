@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnSelfMaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我的素材" 
+                android:background="@null"
+                android:textColor="@color/main_top_color"/>
+
+            <Button
+                android:id="@+id/btnSelfEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我的表情包"
+                android:background="@null"
+                android:textColor="@color/main_top_color" />
+
+        </LinearLayout>
+	        <GridView
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:numColumns="3"
+	            android:id="@+id/gridSelf" />
+    </LinearLayout>
+
+</FrameLayout>

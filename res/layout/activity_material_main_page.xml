@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_material_main_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.etc.emoji.MaterialMainPageActivity">
+
+    <ImageView
+        android:id="@+id/imgMaterialmainPage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:layout_height="40dp"
+        android:background="@drawable/back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageButton"
+        android:layout_width="22dp"
+        android:onClick="back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgMaterialmainPage"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView"
+        android:text="简介："
+        android:textSize="14sp" />
+
+    <TextView
+        android:text="詹姆斯，白牙"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/txtMaterialmainpageInfo"
+        android:layout_alignTop="@+id/textView"
+        android:textSize="14sp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container_me"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp" >
+ 
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="19dp"
+        android:numColumns="2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/gridMaterialMainpage" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/btnMake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtMaterialmainpageInfo"
+        android:layout_alignBottom="@+id/txtMaterialmainpageInfo"
+        android:layout_alignRight="@+id/imgMaterialmainPage"
+        android:onClick="make"
+        android:text="制作"
+        android:background="@drawable/btn_register"
+        android:textColor="@color/main_top_color" />
+
+</RelativeLayout>

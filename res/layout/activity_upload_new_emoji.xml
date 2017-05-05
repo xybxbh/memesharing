@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.etc.emoji.UploadNewEmojiActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ImageView
+        android:id="@+id/imgNewEmoji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a1map" />
+
+    <EditText
+        android:id="@+id/edtUploadNew"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="270dp"
+        android:ems="10"
+        android:hint="介绍"
+        android:background="@drawable/login_username" >
+
+        <requestFocus />
+    </EditText>
+    
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp" >
+
+        <Button
+            android:id="@+id/btnUploadNewBack"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_register"
+            android:onClick="back"
+            android:text="返回" 
+            android:textColor="@color/main_top_color"/>
+
+        <Button
+            android:id="@+id/btnUploadNew"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_register"
+            android:onClick="upload"
+            android:text="上传"
+            android:textColor="@color/main_top_color" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/main_top_color">
+
+        <ImageView
+            android:id="@+id/imgUserphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:onClick="changeuserphoto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUsername"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02" />
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/btnsearch"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/search"
+            android:onClick="search" />
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btnupload"
+            android:background="@drawable/upload"
+            android:onClick="upload" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_tab_height"
+        android:background="@color/main_top_color">
+
+        <TextView
+            android:id="@+id/material_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/material"
+            android:textStyle="bold"
+            android:textColor="@color/main_top_tab_color"
+            android:textSize="@dimen/main_top_tab_text_size" />
+
+        <TextView
+            android:id="@+id/emoji_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/emoji"
+            android:textStyle="bold"
+            android:textColor="@color/main_top_tab_color"
+            android:textSize="@dimen/main_top_tab_text_size" />
+
+        <TextView
+            android:id="@+id/self_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/self"
+            android:textStyle="bold"
+            android:textColor="@color/main_top_tab_color"
+            android:textSize="@dimen/main_top_tab_text_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_line_height"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@color/main_top_color"
+        >
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="@dimen/main_matrix_width"
+            android:layout_height="@dimen/main_line_height"
+            android:scaleType="matrix"
+            android:src="@color/matrix_color" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_top_color"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+</LinearLayout>

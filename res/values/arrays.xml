@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spin">
+        <item>请选择</item>
+        <item>素材</item>
+        <item>表情包</item>
+    </string-array>
+</resources>
