@@ -5,6 +5,7 @@
     android:id="@+id/activity_search"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,14 +13,11 @@
     tools:context="com.etc.emoji.SearchActivity" >
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginEnd="26dp"
-        android:weightSum="1">
+        android:orientation="vertical"
+        android:weightSum="1" >
 
         <LinearLayout
             android:orientation="horizontal"
@@ -27,34 +25,41 @@
             android:layout_height="53dp"
             android:weightSum="1">
 
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:id="@+id/spnSelect"
-                android:entries="@array/spin" />
-            
-            <EditText
-		        android:id="@+id/edtTagname"
-		        android:layout_width="160dp"
-		        android:layout_height="40dp"
-		        android:ems="10"
-		        android:hint="搜索内容"
-		        android:background="@drawable/login_username" />
-
             <Button
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/search_pink"
-                android:id="@+id/btnSearch"
-                android:onClick="search" />
-            
-            <Button
+                android:id="@+id/btnBack"
                 android:layout_width="11dp"
                 android:layout_height="20dp"
                 android:background="@drawable/back"
-		        android:layout_marginLeft="20dp"
-                android:id="@+id/btnBack"
-                android:onClick="back" />
+                android:onClick="back" 
+                android:layout_marginRight="10dp"/>
+
+            <Spinner
+                android:id="@+id/spnSelect"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:entries="@array/spin" />
+
+            <EditText
+                android:id="@+id/edtTagname"
+                android:layout_width="138dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.80"
+                android:background="@drawable/style"
+                android:ems="10"
+                android:hint="搜索内容"
+                android:textSize="15dp" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/search1"
+                android:onClick="search" />
 
         </LinearLayout>
 

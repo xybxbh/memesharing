@@ -42,7 +42,7 @@ public class ShowEmojiCommentsTask extends AsyncTask<String, Void, List<Comment>
 
     @Override
     protected List<Comment> doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/ShowEmojiCommentsServlet";
+        String url = "http://139.199.158.77:8080/Emoji/ShowEmojiCommentsServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 

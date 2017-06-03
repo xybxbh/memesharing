@@ -46,7 +46,7 @@ public class ShowEmojiSearchTask extends AsyncTask <String, Void, List<Emoji>>{
     }
     @Override
     protected List<Emoji> doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/UserSearchEmojiServlet";
+        String url = "http://139.199.158.77:8080/Emoji/UserSearchEmojiServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 
@@ -88,7 +88,7 @@ public class ShowEmojiSearchTask extends AsyncTask <String, Void, List<Emoji>>{
     protected void onPostExecute(List<Emoji> result) {
         final List<Emoji>  list = result;
         if(result!=null){
-            Toast.makeText(context, emojiListGson, Toast.LENGTH_SHORT).show();
+           
             SearchEmojiSimpleAdapter adapter = new SearchEmojiSimpleAdapter(context,result);
             listResult.setAdapter(adapter);
             listResult.setVisibility(View.VISIBLE);

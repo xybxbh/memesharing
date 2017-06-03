@@ -164,8 +164,8 @@ public class AddTextActivity extends Activity implements OnClickListener
 			String savename = StringUtil.getuploadTime()+".jpg";
 			mPath = saveBitmap(bmp, savename);
 			
-			Toast.makeText(this, savename, Toast.LENGTH_SHORT).show();
-			Toast.makeText(this, mPath, Toast.LENGTH_SHORT).show();
+			//Toast.makeText(this, savename, Toast.LENGTH_SHORT).show();
+			//Toast.makeText(this, mPath, Toast.LENGTH_SHORT).show();
 			sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(mPath))));
 			//以上已经完成了保存到内存
 			Intent intent = new Intent(AddTextActivity.this,UploadNewEmojiActivity.class);

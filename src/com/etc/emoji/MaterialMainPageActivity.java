@@ -20,7 +20,7 @@ public class MaterialMainPageActivity extends Activity implements OnRefreshListe
     private GridView gridMaterialMainpage;
     private TextView txtMaterialmainpageInfo;
     private ImageView imgMaterialmainPage;
-    private String urlString = "http://10.0.2.2:8080/Emoji/image/material/";
+    private String urlString = "http://139.199.158.77:8080/Emoji/image/material/";
     private SwipeRefreshLayout swipe;
     private Material material;
 

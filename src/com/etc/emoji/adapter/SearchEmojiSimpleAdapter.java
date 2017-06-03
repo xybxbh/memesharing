@@ -20,7 +20,8 @@ public class SearchEmojiSimpleAdapter extends BaseAdapter {
     List<Emoji> list;
     Context context;
     Emoji emoji;
-    private String urlString = "http://10.0.2.2:8080/Emoji/image/emoji/";
+    private String urlString = "http://139.199.158.77:8080/Emoji/image/emoji/";
+    //private String urlString = "http://139.199.158.77:8080/emoji/image/material/";
     public SearchEmojiSimpleAdapter(Context context, List<Emoji> list) {
         this.context = context;
         this.list = list;

@@ -37,6 +37,8 @@ public class UserLoginTask extends AsyncTask<String, Void, Boolean> {
     private SharedPreferences sp;
     private Context context;
     private Intent intent;
+    private String userJSON;
+    User user ;
 
     public UserLoginTask(Boolean ischecked, CheckBox ckbLoginSave, emojiApp emojiApp,
                          SharedPreferences sp, Context LoginContext, Intent intent) {
@@ -49,7 +51,7 @@ public class UserLoginTask extends AsyncTask<String, Void, Boolean> {
     }
     @Override
     protected Boolean doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/UserLogiinServlet";
+        String url = "http://139.199.158.77:8080/Emoji/UserLogiinServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 
@@ -64,11 +66,12 @@ public class UserLoginTask extends AsyncTask<String, Void, Boolean> {
 
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
 
-                String userJSON = EntityUtils.toString(response.getEntity());
+                userJSON = EntityUtils.toString(response.getEntity());
                 System.out.println(userJSON);
 
                 Gson gson = new Gson();
-                User user = gson.fromJson(userJSON, User.class);
+                user = gson.fromJson(userJSON, User.class);
+               
 
                 emojiApp.setUser(user);
 
@@ -101,10 +104,14 @@ public class UserLoginTask extends AsyncTask<String, Void, Boolean> {
 
     @Override
     protected void onPostExecute(Boolean result) {
-        if (result == true) {
+        if (result == true&&user.getUsername()!=null&&user.getPassword()!=null) {
+        	
+        		 context.startActivity(intent);
+                 Toast.makeText(context, "登录成功", Toast.LENGTH_SHORT).show();
+                 
+     
 
-            context.startActivity(intent);
-            Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();
+           
         } else {
             Toast.makeText(context, "not found", Toast.LENGTH_SHORT).show();
         }

@@ -44,10 +44,21 @@ public class LoginActivity extends Activity {
         username = edtLoginusername.getText().toString();
         password = edtPassword.getText().toString();
         ischecked = ckbLoginSave.isChecked();
+       // Toast.makeText(this, username, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, password, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        
+        if((username+"1").equals("1") ||(password+"1").equals("1") )
+        {
+        	Toast.makeText(this, "用户名或密码不可为空", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+        	Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+       	 new UserLoginTask(ischecked,ckbLoginSave,myApp,sp,this,intent).execute(username,password);
+        }
 
-        new UserLoginTask(ischecked,ckbLoginSave,myApp,sp,this,intent).execute(username,password);
+       
         
     }
     public void register(View v)

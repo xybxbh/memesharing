@@ -38,7 +38,7 @@ public class RegisterTask extends AsyncTask<String, Void, Boolean> {
 
     @Override
     protected Boolean doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/UserRegisterServlet";
+        String url = "http://139.199.158.77:8080/Emoji/UserRegisterServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 
@@ -79,7 +79,7 @@ public class RegisterTask extends AsyncTask<String, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean result) {
         if (result == true) {
-            Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();
 
 
             Toast.makeText(context, userJSON, Toast.LENGTH_SHORT).show();

@@ -28,7 +28,7 @@ public class UploadNewEmojiActivity extends Activity {
 	private EditText edtUploadNew;
 	private ImageView imgNewEmoji;
 	private emojiApp app;
-	private String url = "http://10.0.2.2:8080/Emoji/UploadNewEmojiServlet";
+	private String url = "http://139.199.158.77:8080/Emoji/UploadNewEmojiServlet";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

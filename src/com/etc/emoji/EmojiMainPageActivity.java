@@ -24,7 +24,7 @@ public class EmojiMainPageActivity extends Activity implements OnRefreshListener
     private TextView txtEmojiMainPageInfo;
     private TextView txtEmojiCommentCounts;
     private ListView listEmojiComments;
-    private String urlString = "http://10.0.2.2:8080/Emoji/image/emoji/";
+    private String urlString = "http://139.199.158.77:8080/Emoji/image/emoji/";
     private int emojiid;
     Emoji emoji;
     private SwipeRefreshLayout swipe;

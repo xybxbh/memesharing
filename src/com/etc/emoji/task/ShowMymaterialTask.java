@@ -46,7 +46,7 @@ public class ShowMymaterialTask extends AsyncTask<String, Void, List<Material>> 
     protected List<Material> doInBackground(String... arg0) {
 
 
-        String url = "http://10.0.2.2:8080/Emoji/GetMyMaterialServlet";
+        String url = "http://139.199.158.77:8080/Emoji/GetMyMaterialServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 

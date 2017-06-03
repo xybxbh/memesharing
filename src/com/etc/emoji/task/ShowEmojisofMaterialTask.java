@@ -46,7 +46,7 @@ public class ShowEmojisofMaterialTask extends AsyncTask<String, Void, List<Emoji
     }
     @Override
     protected List<Emoji> doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/ShowEmojisofMaterialServlet";
+        String url = "http://139.199.158.77:8080/Emoji/ShowEmojisofMaterialServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 

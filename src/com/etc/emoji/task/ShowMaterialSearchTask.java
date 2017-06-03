@@ -46,7 +46,7 @@ public class ShowMaterialSearchTask extends AsyncTask<String, Void, List<Materia
 
     @Override
     protected List<Material> doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/UserSearchMaterialServlet";
+        String url = "http://139.199.158.77:8080/Emoji/UserSearchMaterialServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 
@@ -88,8 +88,12 @@ public class ShowMaterialSearchTask extends AsyncTask<String, Void, List<Materia
 
     protected void onPostExecute(List<Material> result) {
         final List<Material>  list = result;
+        if(result==null)
+        {
+        	Toast.makeText(context, "无搜索结果", Toast.LENGTH_SHORT).show();
+        }
         if(result!=null){
-            Toast.makeText(context, materialListGson, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context, materialListGson, Toast.LENGTH_SHORT).show();
             SearchMaterialSimpleAdapter adapter = new SearchMaterialSimpleAdapter(context,result);
             listResult.setAdapter(adapter);
             listResult.setVisibility(View.VISIBLE);

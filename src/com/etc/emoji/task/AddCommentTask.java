@@ -33,7 +33,7 @@ public class AddCommentTask extends AsyncTask<String, Void, Boolean> {
     }
     @Override
     protected Boolean doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/AddCommentServlet";
+        String url = "http://139.199.158.77:8080/Emoji/AddCommentServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 

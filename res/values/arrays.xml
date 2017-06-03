@@ -4,5 +4,6 @@
         <item>请选择</item>
         <item>素材</item>
         <item>表情包</item>
+       <!-- <item name="android:textcolor">@color/pink</item>  -->
     </string-array>
 </resources>

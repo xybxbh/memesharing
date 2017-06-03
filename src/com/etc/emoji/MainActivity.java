@@ -25,6 +25,8 @@ import com.etc.emoji.task.UserphotoUpload;
 import com.etc.emoji.utils.StringUtil;
 
 import org.xutils.x;
+import org.xutils.common.util.DensityUtil;
+import org.xutils.image.ImageOptions;
 
 import java.util.ArrayList;
 
@@ -56,7 +58,7 @@ public class MainActivity extends FragmentActivity {
     private TextView txtUsername;
     private emojiApp app;
     private Uri uri;
-    private String url = "http://10.0.2.2:8080/Emoji/UploadUserphotoServlet";
+    private String url = "http://139.199.158.77:8080/Emoji/UploadUserphotoServlet";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,9 +76,10 @@ public class MainActivity extends FragmentActivity {
         }
         else
         {
-            String urlString = "http://10.0.2.2:8080/Emoji/image/photo/";
-            x.image().bind(imgUserphoto, urlString + "1.gif");
-           // imgUserphoto.setImageResource(R.drawable.dotshape);
+       	
+        		  String urlString = "http://139.199.158.77:8080/Emoji/image/photo/"; 	         
+                  x.image().bind(imgUserphoto, urlString + app.getUser().getUserphoto());
+   
         }
         txtUsername.setText(app.getUser().getUsername());
 
@@ -330,5 +333,6 @@ public class MainActivity extends FragmentActivity {
         emojiTextView.setTextColor(getResources().getColor(R.color.main_top_tab_color));
         selfTextView.setTextColor(getResources().getColor(R.color.main_top_tab_color));
     }
+  
 
 }

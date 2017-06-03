@@ -38,7 +38,7 @@ public class ShowCommentCountsTask extends AsyncTask<String, Void, Boolean > {
 
     @Override
     protected Boolean doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/ShowCommentCountsServlet";
+        String url = "http://139.199.158.77:8080/Emoji/ShowCommentCountsServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
 
@@ -80,7 +80,7 @@ public class ShowCommentCountsTask extends AsyncTask<String, Void, Boolean > {
     protected void onPostExecute(Boolean result) {
         if (result == true) {
 
-        	 txtEmojiCommentCounts.setText("评论:"+"("+countGson+")");
+        	 txtEmojiCommentCounts.setText("评论:"+" "+countGson);
            
         } else {
             Toast.makeText(context, "not found", Toast.LENGTH_SHORT).show();

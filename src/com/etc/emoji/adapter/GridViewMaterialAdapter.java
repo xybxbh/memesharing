@@ -17,7 +17,9 @@ public class GridViewMaterialAdapter extends BaseAdapter {
     List<Material> list;
     Context context;
     Material material;
-    private String urlString = "http://10.0.2.2:8080/Emoji/image/material/";
+    
+   // private String urlString = "http://139.199.158.77:8080/emoji/image/material/";
+    private String urlString = "http://139.199.158.77:8080/Emoji/image/material/";
     public GridViewMaterialAdapter(Context context, List<Material> list) {
         this.context = context;
         this.list = list;

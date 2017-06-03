@@ -24,9 +24,10 @@ public class UploadActivity extends Activity {
     Context context;
     String filename;
     String info;
+    boolean test=false;
     private emojiApp app;
-    private String url1 = "http://10.0.2.2:8080/Emoji/UploadMaterialServlet";
-    private String url2 = "http://10.0.2.2:8080/Emoji/UploadEmojiServlet";
+    private String url1 = "http://139.199.158.77:8080/Emoji/UploadMaterialServlet";
+    private String url2 = "http://139.199.158.77:8080/Emoji/UploadEmojiServlet";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,43 +57,44 @@ public class UploadActivity extends Activity {
         if(resultCode == RESULT_OK) {
             uri = data.getData();
             imgUpload.setImageURI(uri);
+            test=true;
 
         }
          context = this.getApplicationContext();
          filename = StringUtil.getRealPathFromURI(context, uri);
-         Toast.makeText(context,filename, Toast.LENGTH_SHORT).show();
+      //   Toast.makeText(context,filename, Toast.LENGTH_SHORT).show();
 
     }
     public void uploadtomaterial(View V)
     {
-    	 info = edtuploadinfo.getText().toString();
-        new ImageUpload().execute(url1, filename, info, Integer.toString(app.getUser().getUserid()));
+    	if(test)
+    	{
+    		info = edtuploadinfo.getText().toString();
+            new ImageUpload().execute(url1, filename, info, Integer.toString(app.getUser().getUserid()));
+            Intent intent = new Intent(UploadActivity.this, MainActivity.class);
+            startActivity(intent);
+    	}
+    	
+    	 
       
         
-        Intent intent = new Intent(UploadActivity.this, MainActivity.class);
-        startActivity(intent);
+        
     }
     public void uploadtoemoji(View V)
     {
-    	 info = edtuploadinfo.getText().toString();
-        new ImageUpload().execute(url2, filename, info, Integer.toString(app.getUser().getUserid()));
-       
-        Intent intent = new Intent(UploadActivity.this, MainActivity.class);
-        startActivity(intent);
+    	if(test)
+    	{
+    		info = edtuploadinfo.getText().toString();
+            new ImageUpload().execute(url2, filename, info, Integer.toString(app.getUser().getUserid()));
+           
+            Intent intent = new Intent(UploadActivity.this, MainActivity.class);
+            startActivity(intent);
+    	}
+    	else
+    	{
+    		Toast.makeText(this, "请选择图片", Toast.LENGTH_SHORT).show();
+    	}
+    	 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

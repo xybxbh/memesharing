@@ -3,26 +3,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     >
+    android:background="#fff">
 
     <include
         android:id="@+id/common_top_bar"
         layout="@layout/layout_common_top_bar" />
 
-    <LinearLayout
-        android:id="@+id/mainLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_linear"
-        android:layout_below="@+id/common_top_bar"
-        android:gravity="center"
-        android:orientation="vertical" >
-    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/face_linear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_above="@+id/bottom_linear"
         android:gravity="center"
         android:orientation="horizontal"
@@ -35,7 +35,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="字体"
-            android:textSize="18dp" />
+            android:textSize="18dp" 
+            android:textColor="#fff"
+            android:background="#ffa6ff"/>
 
         <Button
             android:id="@+id/faceby"
@@ -44,7 +46,11 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="字体"
-            android:textSize="18dp" />
+            android:textSize="18dp" 
+            android:textColor="#fff"
+            android:background="#ffa6ff"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
 
         <Button
             android:id="@+id/facebygf"
@@ -53,16 +59,18 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="字体"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:textColor="#fff"
+            android:background="#ffa6ff" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom_linear"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
-        android:background="#000"
+        android:background="@color/pink"
         android:orientation="horizontal" >
 
         <Button
@@ -72,7 +80,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="颜色"
-            android:textColor="#979797"
+            android:textColor="#fff"
+            android:background="@color/pink"
             android:textSize="18dp" />
 
         <Button
@@ -82,7 +91,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="字体"
-            android:textColor="#979797"
+            android:textColor="#fff"
+            android:background="@color/pink"
             android:textSize="18dp" />
 
         <Button
@@ -92,7 +102,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="添加文字"
-            android:textColor="#979797"
+            android:textColor="#fff"
+            android:background="@color/pink"
             android:textSize="18dp" />
     </LinearLayout>
 

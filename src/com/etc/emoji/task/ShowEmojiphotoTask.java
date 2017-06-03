@@ -44,7 +44,7 @@ public class ShowEmojiphotoTask extends AsyncTask<String, Void, List<Emoji>> {
     }
     @Override
     protected List<Emoji> doInBackground(String... arg0) {
-        String url = "http://10.0.2.2:8080/Emoji/ShowAllEmojiServlet";
+        String url = "http://139.199.158.77:8080/Emoji/ShowAllEmojiServlet";
         HttpClient client = new DefaultHttpClient();
         HttpPost request = new HttpPost(url);
         
